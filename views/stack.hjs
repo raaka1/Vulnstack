@@ -156,7 +156,7 @@
                                 <figcaption class="figure-caption">(Screenshot source: Coral - App &amp; website startup kit)</figcaption>
                             </figure>
                             <div class="desc text-left">
-                                  <form method="get" action="/createproject">
+                                  <form method="post" action="/createproject">
 
                         
 
