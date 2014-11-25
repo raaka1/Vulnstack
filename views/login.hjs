@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>Responsive website template for products</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/stylesheets/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/stylesheets/assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/assets/plugins/flexslider/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/stylesheets/assets/css/styles.css">
+
+</head>
+
+<body class="login-page access-page has-full-screen-bg">
+    <div class="upper-wrapper">
+        <!-- ******HEADER****** -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="/"><span class="logo-icon"></span><span class="text">Vulnstack</span></a>
+                </h1>
+                <!--//logo-->
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+
+        <!-- ******Login Section****** -->
+        <section class="login-section access-section section">
+            <div class="container">
+                <div class="row">
+                    <div class="form-box col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
+                        <div class="form-box-inner">
+                            <h2 class="title text-center">Log in to Vulnstack</h2> 
+                            <div class="row">
+                                <div class="form-container col-md-5 col-sm-12 col-xs-12">
+                                    <form class="login-form" method="post" action="/login">
+                                        <div class="form-group email">
+                                            <label class="sr-only" for="login-email">Email or username</label>
+                                            <input name="username" type="email" class="form-control login-email" placeholder="Email or username">
+                                        </div>
+                                        <!--//form-group-->
+                                        <div class="form-group password">
+                                            <label class="sr-only" for="login-password">Password</label>
+                                            <input name="password" type="password" class="form-control login-password" placeholder="Password">
+                                            <p class="forgot-password"><a href="#">Forgot password?</a>
+                                            </p>
+                                        </div>
+                                        <!--//form-group-->
+                                        <button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
+                                        <div class="checkbox remember">
+                                            <label>
+                                                <input type="checkbox">Remember me
+                                            </label>
+                                        </div>
+                                        <!--//checkbox-->
+                                        <!--//   <p class="lead">Don't have a Velocity account yet? <br /><a class="signup-link" href="signup.html">Create your account now</a></p>  -->
+                                    </form>
+                                </div>
+                                <!--//form-container-->
+                                <div class="social-btns col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-sm-offset-0">
+                                    <div class="divider"><span>Or</span>
+                                    </div>
+
+                                    
+<form class="login-form" method="post" action="/register">
+
+                                        <div class="form-group email">
+                                            <label class="sr-only" for="login-email">Email or username</label>
+                                            <input name="username" type="email" class="form-control login-email" placeholder="Email or username">
+                                        </div>
+                                        <!--//form-group-->
+                                        <div class="form-group password">
+                                            <label class="sr-only" for="login-password">Password</label>
+                                            <input name="password" type="password" class="form-control login-password" placeholder="Password">
+ <br />
+                                             <br />
+<button type="submit" class="btn btn-block btn-cta-primary">Register</button>
+                                    </form>
+
+                                    </div>
+                                    <!--//form-box-inner-->
+                                </div>
+                                <!--//form-box-->
+                            </div>
+                            <!--//row-->
+                        </div>
+                        <!--//container-->
+        </section>
+        <!--//contact-section-->
+        </div>
+        <!--//upper-wrapper-->
+
+
+
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="/stylesheets/assets/plugins/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/FitVids/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="/stylesheets/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+
