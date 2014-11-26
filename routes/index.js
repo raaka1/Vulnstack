@@ -83,7 +83,7 @@ var Bugdetail = mongoose.model('Bugdetail', cveid)
 
 router.get('/createproject', function(req, res) {
 
-    res.render('login#feature-2',{image1:"working"});
+    res.render('stack#feature-2',{image1:"working"});
 });
 
 

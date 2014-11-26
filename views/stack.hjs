@@ -152,7 +152,7 @@
                         <div class="tab-pane" id="feature-2">
                             <h3 class="title sr-only">Feature Two</h3> 
                             <figure class="figure text-center">
-                                <img class="img-responsive" src={%image1%} alt="" />
+                                <img class="img-responsive" src= alt="" />
                                 <figcaption class="figure-caption">(Screenshot source: Coral - App &amp; website startup kit)</figcaption>
                             </figure>
                             <div class="desc text-left">
@@ -162,7 +162,7 @@
                                     <a href="/createproject">TABRENDER</a>
                                 </p>
                                 <blockquote>
-                                    <p>Viverra magna pellentesque in magnis gravida sit augue felis vehicula vestibulum semper penatibus justo ornare semper Gravida felis platea arcu mus non. Montes at posuere. Natoque.</p>
+                                    <p>{%image1%}</p>
                                 </blockquote>
 
                             </div>
