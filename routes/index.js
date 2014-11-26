@@ -47,7 +47,7 @@ router.post('/register', function(req, res) {
         }
            passport.authenticate('local')(req, res, function () {
               // res.redirect('/stack');
-          res.render('index', {
+          res.render('stack', {
         usrnme:req.user.username
   
     })
@@ -60,7 +60,7 @@ router.post('/register', function(req, res) {
 
  router.post('/login',passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-      res.render('index', {
+      res.render('stack', {
         usrnme:req.user.username
   
     })
