@@ -66,10 +66,33 @@ router.post('/register', function(req, res) {
     })
   });
 
-router.post('/createproject', function(req,res){
-    res.render('stack,#feature-2',{        // can we render a tab is it possible ?
-        image1:"working"
-    })
+
+
+
+mongoose.connect('mongodb://127.0.0.1/openstack2014');
+
+var cveid = mongoose.Schema({
+    name: String,
+    sname: String
+});
+
+var Bugdetail = mongoose.model('Bugdetail', cveid)
+
+
+
+
+router.post('/createproject', function(req, res) {
+    var bugid = req.body.CVEID;
+    var bugname = req.body.screenName;
+    var bugproject =
+        new Bugdetail({
+            name: bugid,
+            sname: bugname
+        });
+    // console.log(bugproject.name)
+    bugproject.save();
+    res.redirect('/stack')
+
 });
 
 
