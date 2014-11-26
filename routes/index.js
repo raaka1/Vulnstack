@@ -47,7 +47,7 @@ router.post('/register', function(req, res) {
         }
            passport.authenticate('local')(req, res, function () {
               // res.redirect('/stack');
-          res.render('stack', {
+          res.render('index', {
         usrnme:req.user.username
   
     })
@@ -60,7 +60,7 @@ router.post('/register', function(req, res) {
 
  router.post('/login',passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-      res.render('stack', {
+      res.render('index', {
         usrnme:req.user.username
   
     })
@@ -69,7 +69,7 @@ router.post('/register', function(req, res) {
 
 
 
-mongoose.connect('mongodb://127.0.0.1/openstack2014');
+
 
 var cveid = mongoose.Schema({
     name: String,
@@ -81,18 +81,9 @@ var Bugdetail = mongoose.model('Bugdetail', cveid)
 
 
 
-router.post('/createproject', function(req, res) {
-    var bugid = req.body.CVEID;
-    var bugname = req.body.screenName;
-    var bugproject =
-        new Bugdetail({
-            name: bugid,
-            sname: bugname
-        });
-    // console.log(bugproject.name)
-    bugproject.save();
-    res.redirect('/stack')
+router.get('/createproject', function(req, res) {
 
+    res.render('login#feature-2',{image1:"working"});
 });
 
 

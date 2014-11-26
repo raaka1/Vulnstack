@@ -156,13 +156,10 @@
                                 <figcaption class="figure-caption">(Screenshot source: Coral - App &amp; website startup kit)</figcaption>
                             </figure>
                             <div class="desc text-left">
-                                  <form method="post" action="/createproject">
+                                 
+                            
 
-                        
-
-                                        <input type="submit" value="Submit" />
-
-                                    </form>
+                                    <a href="/createproject">TABRENDER</a>
                                 </p>
                                 <blockquote>
                                     <p>Viverra magna pellentesque in magnis gravida sit augue felis vehicula vestibulum semper penatibus justo ornare semper Gravida felis platea arcu mus non. Montes at posuere. Natoque.</p>
