@@ -616,7 +616,7 @@
     <script type="text/javascript" src="/stylesheets/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/js/main.js"></script>
     <script type="text/javascript" src="/javascripts/angular.js"></script>
-    <script type="text/javascript" src="/javascripts/Chart.js/Chart.js"></script>
+    <script type="text/javascript" src="/javascripts/Chart.js"></script>
 
 </body>
 
