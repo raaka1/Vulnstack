@@ -81,9 +81,21 @@ var Bugdetail = mongoose.model('Bugdetail', cveid)
 
 
 
-router.get('/createproject', function(req, res) {
 
-    res.render('stack#feature-2',{image1:"working"});
+    //res.render('stack#feature-2',{image1:"working"});
+    
+router.post('/createproject', function(req, res) {
+    var bugid = req.body.CVEID;
+    var bugname = req.body.screenName;
+    var bugproject =
+        new Bugdetail({
+            name: bugid,
+            sname: bugname
+        });
+    // console.log(bugproject.name)
+    bugproject.save();
+    res.redirect('/stack')
+
 });
 
 
