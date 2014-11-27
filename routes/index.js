@@ -19,7 +19,13 @@ mongoose.connect('mongodb://127.0.0.1/passport_local_mongoose');
 
 router.get('/', function(req, res) {
     res.render('index', {})
+    });
+
+router.get('*', function(req, res) {
+ //Anti_Path_Traversal
+  res.status(200).end()
 });
+
 
 router.get('/login', function(req, res) {
     res.render('login', {})
