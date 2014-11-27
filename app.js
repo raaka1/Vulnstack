@@ -1,16 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var routes = require('./routes/index');
-var mongoose = require('mongoose');
-var session = require('express-session')
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+// required modules
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    routes = require('./routes/index'),
+    mongoose = require('mongoose'),
+    session = require('express-session'),
+    passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy;
 
-
+// create express app
 var app = express();
 
 // view engine setup
@@ -28,12 +29,19 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser('vvfdtveketfftjnfcrlgukniguveffdcccjlcfelvkbd'));
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: 'vvfdtveketffrktnrgngnbcvjddithdedhnibjnuhgju', 
-                 saveUninitialized: true,
-                 resave: true}));
+app.use(session(
+    {
+        secret: 'vvfdtveketffrktnrgngnbcvjddithdedhnibjnuhgju',
+        saveUninitialized: true,
+        resave: true
+    }
+));
+// passport
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+// routes
 app.use('/', routes);
 
 
@@ -46,8 +54,6 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
- 
-
 
 // production error handler
 // no stacktraces leaked to user
