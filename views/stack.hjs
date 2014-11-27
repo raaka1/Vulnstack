@@ -159,7 +159,19 @@
                                  
                             
 
-                                    <a href="/createproject">TABRENDER</a>
+                                   
+                                    <form method="post" action="/createproject">
+
+                                        <label for="name">Name:</label>
+                                        <input type="text" name="screenName" />
+                                        <br />
+                                        <label for="CVEID">CVEID:</label>
+                                        <input type="text" name="CVEID" />
+                                        <br />
+
+                                        <input type="submit" value="Submit" />
+
+                                    </form>
                                 </p>
                                 <blockquote>
                                     <p>{%image1%}</p>

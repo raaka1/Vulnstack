@@ -54,7 +54,7 @@ router.post('/login',passport.authenticate('local', { failureRedirect: '/login' 
     })
 });
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 var Bugdetail = mongoose.model('Bugdetail', cveid)
 
 
@@ -64,8 +64,8 @@ var Bugdetail = mongoose.model('Bugdetail', cveid)
     //res.render('stack#feature-2',{image1:"working"});
     
 router.post('/createproject', function(req, res) {
-    var bugid = req.body.CVEID;
-    var bugname = req.body.screenName;
+    var bugid = req.body.CVEID,
+        bugname = req.body.screenName;
     var bugproject =
         new Bugdetail({
             name: bugid,
@@ -74,13 +74,14 @@ router.post('/createproject', function(req, res) {
     // console.log(bugproject.name)
     bugproject.save();
     res.redirect('/stack')
-
+    });
+/*
 =======
 router.get('/createproject', function(req, res) {
     res.render('stack#feature-2', {image1:"working"});
 >>>>>>> FETCH_HEAD
 });
-
+*/
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
