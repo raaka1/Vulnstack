@@ -153,20 +153,18 @@
                             <h3 class="title sr-only">Feature Two</h3> 
                             <figure class="figure text-center">
                                 <img class="img-responsive" src= alt="" />
+                                https://cve.mitre.org/cve/identifiers/syntaxchange.html
                                 <figcaption class="figure-caption">(Screenshot source: Coral - App &amp; website startup kit)</figcaption>
                             </figure>
-                            <div class="desc text-left">
-                                 
-                            
-
-                                   
+                            <div class="desc text-left" ng-app="">
+                                      
                                     <form method="post" action="/createproject">
 
                                         <label for="name">Name:</label>
-                                        <input type="text" name="screenName" />
+                                        <input type="text" name="screenName" ng-model="name" />
                                         <br />
                                         <label for="CVEID">CVEID:</label>
-                                        <input type="text" name="CVEID" />
+                                        <input type="text" name="CVEID" ng-model="CVEID" />
                                         <br />
 
                                         <input type="submit" value="Submit" />
@@ -174,7 +172,8 @@
                                     </form>
                                 </p>
                                 <blockquote>
-                                    <p>{%image1%}</p>
+                                    <p ng-bind="name"></p>
+                                    <p ng-bind="CVEID"></p>
                                 </blockquote>
 
                             </div>
@@ -453,6 +452,7 @@
     <script type="text/javascript" src="/stylesheets/assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/plugins/FitVids/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+     <script type="text/javascript" src="/javascripts/angular.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/js/main.js"></script>
 
 

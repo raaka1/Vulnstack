@@ -17,15 +17,15 @@ mongoose.connect('mongodb://127.0.0.1/passport_local_mongoose');
 
 // routes
 
-router.get('/', function(req, res) {
-    res.render('index', {})
+router.get('/', function(req, res,err) {
+         res.render('index', {})
+             //Anti_Path_Traversal
+if(req.url = err){res.status(200).end()}
     });
 
-router.get('*', function(req, res) {
- //Anti_Path_Traversal
-  res.status(200).end()
-});
-
+router.get('/disclosure', function(req, res,err) {
+         res.render('disclosure', {})
+    });
 
 router.get('/login', function(req, res) {
     res.render('login', {})
