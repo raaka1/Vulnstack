@@ -29,13 +29,11 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser('vvfdtveketfftjnfcrlgukniguveffdcccjlcfelvkbd'));
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session(
-    {
-        secret: 'vvfdtveketffrktnrgngnbcvjddithdedhnibjnuhgju',
-        saveUninitialized: true,
-        resave: true
-    }
-));
+app.use(session({
+    secret: 'vvfdtveketffrktnrgngnbcvjddithdedhnibjnuhgju',
+    saveUninitialized: true,
+    resave: true
+}));
 // passport
 app.use(passport.initialize());
 app.use(passport.session());

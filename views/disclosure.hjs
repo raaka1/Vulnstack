@@ -88,7 +88,10 @@ Recognize your contribution on our Security Researcher Hall of Fame, if you are 
                 
                 <div class="press-kit text-center">
                     <h3 class="title">Press Kit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+                    <p>OpenStack: the open alternative to cloud lock-in
+Invented by Rackspace and NASA.</p>
+<p>
+OpenStack® is an open and scalable operating system for building public and private clouds. It provides both large and small organizations an alternative to closed cloud environments, reducing the risks of lock-in associated with proprietary platforms. OpenStack offers flexibility and choice through a highly engaged community of over 6,000 individuals and over 190 companies including Rackspace®, Dell, HP, IBM, and Red Hat®.</p>
                     <p>Please <a href="contact.html">contact us</a> if you need more materials.</p>
                     <a class="btn btn-cta btn-cta-secondary" href="#">Download Press Kit</a>
                 </div><!--//press-kit-->

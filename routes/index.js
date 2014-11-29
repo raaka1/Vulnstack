@@ -7,6 +7,9 @@ var express = require('express'),
     Account = require('../models/account'),
     cveid = require('../models/cve');
 
+
+
+
 // passport
 passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
