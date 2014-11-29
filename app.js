@@ -47,9 +47,10 @@ app.use('/', routes);
 
 
 // catch 404 and forward to error handler
+//Anti_Path_Traversal
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
-    err.status = 404;
+    err.status = 200;
     next(err);
 });
 

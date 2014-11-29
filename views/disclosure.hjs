@@ -49,7 +49,6 @@
                         <li class="nav-item"><a href="/stack">Stack</a></li>
                         <li class="nav-item"><a href="pricing.html">Pricing</a></li>                          
                         <li class="nav-item"><a href="/login">Log in</a></li>
-                        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="signup.html">Sign Up Free</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->                     
