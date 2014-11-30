@@ -9,7 +9,7 @@ var express = require('express'),
     cveid = require('../models/cve');
 
 
-
+//http://qtip2.com/demos
 
 // passport
 passport.use(new LocalStrategy(Account.authenticate()));
