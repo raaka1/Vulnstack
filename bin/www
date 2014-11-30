@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var app = require('../app'),
-    tls = require('tls'),
+    https = require('https'),
     fs = require('fs');
 
 var options = {
@@ -10,10 +10,6 @@ var options = {
 }
 
 //app.set('port', process.env.PORT || 8080);
-/*
-var server = tls.createServer(options, function (req, res) {
-  res.redirect('/')
-})
-*/
-server.listen(8080)
+//var server = tls.createServer(options);
 
+server = app.listen(8080)

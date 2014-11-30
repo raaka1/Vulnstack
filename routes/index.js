@@ -1,6 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     mongoose = require('mongoose'),
+    fs = require('fs'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     passportLocalMongoose = require('passport-local-mongoose'),
@@ -16,19 +17,20 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-mongoose.connect('mongodb://127.0.0.1/passport_local_mongoose');
+var mongopwd = fs.readFile('credentials');
+
+mongoose.connect('mongodb://127.0.0.1/Vulnstack');
 
 // routes
 
 router.get('/', function(req, res) {
-         res.render('index', {})
-    console.log(req.url)
-//http://codecanyon.net/item/jquery-timelinexml/full_screen_preview/1448100
+    res.render('index', {})
+    //http://codecanyon.net/item/jquery-timelinexml/full_screen_preview/1448100
 });
 
-router.get('/disclosure', function(req, res,err) {
-         res.render('disclosure', {})
-    });
+router.get('/disclosure', function(req, res, err) {
+    res.render('disclosure', {})
+});
 
 router.get('/login', function(req, res) {
     res.render('login', {})
@@ -44,22 +46,26 @@ router.get('/stack', function(req, res) {
 });
 
 router.post('/register', function(req, res) {
-    Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+    Account.register(new Account({
+        username: req.body.username
+    }), req.body.password, function(err, account) {
         if (err) {
             res.redirect('/login');
         }
-        passport.authenticate('local')(req, res, function () {
-        // res.redirect('/stack');
+        passport.authenticate('local')(req, res, function() {
+            // res.redirect('/stack');
             res.render('stack', {
-                usrnme:req.user.username
+                usrnme: req.user.username
             })
         });
     });
 });
 
-router.post('/login',passport.authenticate('local', { failureRedirect: '/login' }), function(req, res) {
+router.post('/login', passport.authenticate('local', {
+    failureRedirect: '/login'
+}), function(req, res) {
     res.render('stack', {
-        usrnme:req.user.username
+        usrnme: req.user.username
     })
 });
 
@@ -70,8 +76,8 @@ var Bugdetail = mongoose.model('Bugdetail', cveid)
 
 
 
-    //res.render('stack#feature-2',{image1:"working"});
-    
+//res.render('stack#feature-2',{image1:"working"});
+
 router.post('/createproject', function(req, res) {
     var bugid = req.body.CVEID,
         bugname = req.body.screenName;
@@ -83,7 +89,7 @@ router.post('/createproject', function(req, res) {
     // console.log(bugproject.name)
     bugproject.save();
     res.redirect('/stack')
-    });
+});
 /*
 =======
 router.get('/createproject', function(req, res) {
