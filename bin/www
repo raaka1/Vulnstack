@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 var app = require('../app'),
-    tls = require('tls'),
+    https = require('https'),
     fs = require('fs');
-
+//why tls is not supporting ? http://nodejs.org/api/tls.html
 options = {
     key: fs.readFileSync('bin/certs/ryans-key.pem'),
     cert: fs.readFileSync('bin/certs/ryans-cert.pem')
 }
 //app.set('port', process.env.PORT || 8080);
-server = tls.createServer(options, app).listen(8080);
+
+var server = https.createServer(options, app).listen(8080);
+//force ssl

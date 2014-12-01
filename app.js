@@ -3,6 +3,7 @@ var express = require('express'),
     path = require('path'),
     favicon = require('serve-favicon'),
     logger = require('morgan'),
+    fs = require('fs'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
@@ -49,6 +50,7 @@ app.use('/', routes);
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 200;
+    console.log(req.ip)
     next(err);
 });
 

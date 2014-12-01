@@ -17,7 +17,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-var mongopwd = fs.readFile('credentials');
+var mongopwd = fs.readFile('models/credentials');
 
 mongoose.connect('mongodb://127.0.0.1/Vulnstack');
 
