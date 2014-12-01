@@ -64,11 +64,7 @@
                                         </div>
                                         <!--//form-group-->
                                         <button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
-                                        <div class="checkbox remember">
-                                            <label>
-                                                <input type="checkbox">Remember me
-                                            </label>
-                                        </div>
+                                      
                                         <!--//checkbox-->
                                         <!--//   <p class="lead">Don't have a Velocity account yet? <br /><a class="signup-link" href="signup.html">Create your account now</a></p>  -->
                                     </form>

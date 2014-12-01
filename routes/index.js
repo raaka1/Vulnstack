@@ -6,6 +6,7 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy,
     passportLocalMongoose = require('passport-local-mongoose'),
     Account = require('../models/account'),
+    credentials = require('../models/credentials.js'),
     cveid = require('../models/cve');
 
 
@@ -17,9 +18,11 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-var mongopwd = fs.readFile('models/credentials');
-
-mongoose.connect('mongodb://127.0.0.1/Vulnstack');
+var options ={
+    user : credentials.user, 
+    pass : credentials.pass 
+}
+mongoose.connect('mongodb://127.0.0.1/Vulnstack',options);
 
 // routes
 
@@ -71,11 +74,6 @@ router.post('/login', passport.authenticate('local', {
 
 //<<<<<<< HEAD
 var Bugdetail = mongoose.model('Bugdetail', cveid)
-
-
-
-
-
 //res.render('stack#feature-2',{image1:"working"});
 
 router.post('/createproject', function(req, res) {
