@@ -50,7 +50,9 @@ app.use('/', routes);
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 200; //Anti_Path_Traversal
-    console.log(req.ip)
+    fs.appendFile('log', new Date() + " " + req.ip + " " + err + " " + req.url + "\n", function(err) {
+        if (err) throw err;
+    });
     next(err);
 });
 
@@ -60,6 +62,9 @@ app.use(function(req, res, next) {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
+    fs.appendFile('log', new Date() + " " + req.ip + " " + err + "\n", function(err) {
+        if (err) throw err;
+    });
     res.render('error', {
         message: err.message,
         error: {}
