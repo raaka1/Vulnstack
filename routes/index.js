@@ -7,7 +7,8 @@ var express = require('express'),
     passportLocalMongoose = require('passport-local-mongoose'),
     Account = require('../models/account'),
     credentials = require('../models/credentials.js'),
-    cveid = require('../models/cve');
+    cveid = require('../models/cve'),
+    pkgcloud = require('pkgcloud');
 
 
 //http://qtip2.com/demos
@@ -18,11 +19,11 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-var options ={
-    user : credentials.user, 
-    pass : credentials.pass 
+var options = {
+    user: credentials.user,
+    pass: credentials.pass
 }
-mongoose.connect('mongodb://127.0.0.1/Vulnstack',options);
+mongoose.connect('mongodb://127.0.0.1/Vulnstack', options);
 
 // routes
 
