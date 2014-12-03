@@ -90,7 +90,7 @@
                 <br />That helps to organize vulnerable Virtual Machines and organize tests</p>
             <p><a class="btn btn-cta btn-cta-primary" href="/login">Login</a>
             </p>
-            <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" data-backdrop="static" data-keyboard="false"><i class="fa fa-youtube-play"></i> Watch the video</button>
+
         </div>
         <!--//container-->
     </section>

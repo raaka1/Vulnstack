@@ -49,6 +49,16 @@ router.get('/stack', function(req, res) {
         res.redirect('/login')
 });
 
+router.get('/timeline', function(req, res) {
+    if (req.isAuthenticated())
+        res.render('timeline', {
+            usrnme: req.user.username
+        })
+    else
+        res.redirect('/login')
+});
+
+
 router.post('/register', function(req, res) {
     Account.register(new Account({
         username: req.body.username
