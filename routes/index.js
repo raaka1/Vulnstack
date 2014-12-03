@@ -48,7 +48,7 @@ router.get('/stack', function(req, res) {
     else
         res.redirect('/login')
 });
-
+//req.isUnauthenticated
 router.get('/timeline', function(req, res) {
     if (req.isAuthenticated())
         res.render('timeline', {

@@ -21,6 +21,7 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="/stylesheets/assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/stylesheets/assets/plugins/flexslider/flexslider.css">
+    <link rel="stylesheet" href="/stylesheets/timeline.css">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="/stylesheets/assets/css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -119,21 +120,32 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="feature-1">
                             <h3 class="title sr-only">Feature One</h3> 
-                            <figure class="figure text-center">
-                                <img class="img-responsive" src="assets/images/features/screenshot-1.png" alt="" />
-                                <figcaption class="figure-caption">(Screenshot source: Coral - App &amp; website startup kit)</figcaption>
-                            </figure>
-                            <div class="desc text-left">
-                                <p>{%usrnme%}</p>
-                                <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-star"></i>Lorem ipsum dolor sit amet.</li>
-                                    <li><i class="fa fa-star"></i>Aliquam tincidunt mauris eu risus.</li>
-                                    <li><i class="fa fa-star"></i>Ultricies eget vel aliquam libero.</li>
-                                    <li><i class="fa fa-star"></i>Maecenas nec odio.</li>
-                                </ul>
 
-                                <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                            <div class="desc text-left">
+
+                                <p>
+                                    <div id="timeline-embed"></div>
+                                    <script type="text/javascript">
+                                        var timeline_config = {
+                                            width: '800',
+                                            height: '600',
+                                            source: 'https://docs.google.com/spreadsheet/pub?key=0Agl_Dv6iEbDadHdKcHlHcTB5bzhvbF9iTWwyMmJHdkE&amp;output=html',
+                                            embed_id: 'timeline-embed', //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
+                                            start_at_end: false, //OPTIONAL START AT LATEST DATE
+                                            start_at_slide: '4', //OPTIONAL START AT SPECIFIC SLIDE
+                                            start_zoom_adjust: '3', //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
+                                            hash_bookmark: true, //OPTIONAL LOCATION BAR HASHES
+                                            font: 'Bevan-PotanoSans', //OPTIONAL FONT
+                                            debug: true, //OPTIONAL DEBUG TO CONSOLE
+                                            lang: 'en', //OPTIONAL LANGUAGE
+                                            maptype: 'watercolor', //OPTIONAL MAP STYLE
+                                            css: '/stylesheets/timeline.css', //OPTIONAL PATH TO CSS
+                                            js: '/javascripts/timeline-min.js' //OPTIONAL PATH TO JS
+                                        }
+                                    </script>
+                                    <script type="text/javascript" src="/javascripts/storyjs-embed.js"></script>
+                                </p>
+
                             </div>
                             <!--//desc-->
                         </div>
@@ -338,6 +350,7 @@
     <script type="text/javascript" src="/stylesheets/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/javascripts/angular.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/js/main.js"></script>
+
 
 
 
