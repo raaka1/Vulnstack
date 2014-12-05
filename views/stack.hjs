@@ -132,7 +132,45 @@
                             </figure>
                             <div class="desc text-left">
                                 <p>{%usrnme%}</p>
-                                <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+                                <p>
+                                    <div id="canvas-holder">
+                                        <canvas id="chart-area" width="300" height="300" />
+                                    </div>
+
+
+                                    <script>
+                                        var pieData = [{
+                                            value: 300,
+                                            color: "#F7464A",
+                                            highlight: "#FF5A5E",
+                                            label: "Red"
+                                        }, {
+                                            value: 50,
+                                            color: "#46BFBD",
+                                            highlight: "#5AD3D1",
+                                            label: "Green"
+                                        }, {
+                                            value: 100,
+                                            color: "#FDB45C",
+                                            highlight: "#FFC870",
+                                            label: "Yellow"
+                                        }, {
+                                            value: 40,
+                                            color: "#949FB1",
+                                            highlight: "#A8B3C5",
+                                            label: "Grey"
+                                        }, {
+                                            value: 120,
+                                            color: "#4D5360",
+                                            highlight: "#616774",
+                                            label: "Dark Grey"
+                                        }];
+                                        window.onload = function() {
+                                            var ctx = document.getElementById("chart-area").getContext("2d");
+                                            window.myPie = new Chart(ctx).Pie(pieData);
+                                        };
+                                    </script>
+                                </p>
                                 <ul class="list-unstyled">
                                     <li><i class="fa fa-star"></i>Lorem ipsum dolor sit amet.</li>
                                     <li><i class="fa fa-star"></i>Aliquam tincidunt mauris eu risus.</li>
@@ -449,7 +487,7 @@
     <script type="text/javascript" src="/stylesheets/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/javascripts/angular.js"></script>
     <script type="text/javascript" src="/stylesheets/assets/js/main.js"></script>
-
+    <script type="text/javascript" src="/javascripts/Chart.js"></script>
 
 
 </body>
