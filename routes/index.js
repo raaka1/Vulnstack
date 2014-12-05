@@ -67,7 +67,7 @@ router.post('/register', function(req, res) {
             res.redirect('/login');
         }
         passport.authenticate('local')(req, res, function() {
-            // res.redirect('/stack');
+            // res.redirect('stack');
             res.render('stack', {
                 usrnme: req.user.username
             })
