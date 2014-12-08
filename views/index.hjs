@@ -87,7 +87,7 @@
         <div class="container text-center">
             <h2 class="title">Github for Vulnerblities and VM snapshots <br /></h2>
             <p class="intro">Vulnstack is a private cloud service based on Openstack
-                <br />That helps to organize vulnerable Virtual Machines and organize tests</p>
+                <br />That helps to organize vulnerable Virtual Machines and unit tests</p>
             <p><a class="btn btn-cta btn-cta-primary" href="/login">Login</a>
             </p>
 
@@ -102,14 +102,16 @@
         <section id="why" class="section why">
             <div class="container">
                 <h2 class="title text-center">How Can Vulnstack Help You?</h2>
-                <p class="intro text-center">We take care of the UX and front-end design so you can save time building your site</p>
+                <p class="intro text-center">Vulnstack is a simple interface that can organize and arrange snapshots across multiple virtual machines in a tree structure with a simple ‘point and click’ interface.</p>
                 <div class="row item">
                     <div class="content col-md-4 col-sm-12 col-xs-12">
-                        <h3 class="title"><b>Organize Virtual machines</b></h3>
+                        <h3 class="title"><b>Virtual machines and Snapshots</b></h3>
                         <div class="desc">
 
+                            <p>
+                                Snapshot is a really useful feature when it comes to preserving the current working state of a Virtual Machine. It enables you to repeatedly pick up from the point you last left the system in. When you want to save the current status of your virtual machine in order to pick up from the same point later.</p>
 
-                            <ul class="snapshots">
+                            <p>When there are few machines to manage, it’s far less complicated than it gets with when you are running multiple virtual machines with snapshots. Vulnstack is a simple interface that can organize and arrange snapshots across multiple virtual machines in a tree structure with a simple ‘point and click’ interface.</p>
 
 
                         </div>
@@ -119,7 +121,7 @@
                     <!--//content-->
                     <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <img class="img-responsive" src="/Images/vmw-scrnsht.jpg" alt="" />
-                        <figcaption class="figure-caption">(Screenshot: Coral - App &amp; website startup kit)</figcaption>
+                        <figcaption class="figure-caption">(Screenshot: VMware fusion 7)</figcaption>
                     </figure>
                 </div>
                 <!--//item-->
